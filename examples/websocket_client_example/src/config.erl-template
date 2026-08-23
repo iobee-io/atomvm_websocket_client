@@ -1,0 +1,16 @@
+%
+% SPDX-License-Identifier: Apache-2.0 OR LGPL-2.1-or-later
+%
+-module(config).
+
+-export([get/0]).
+
+%% Copy this file to config.erl and edit to your satisfaction
+
+get() ->
+    #{
+        sta => [
+            {ssid, "myssid"},
+            {psk, "mypassword"}
+        ]
+    }.

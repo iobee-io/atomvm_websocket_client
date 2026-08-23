@@ -1,0 +1,18 @@
+menu "ATOMVM_WEBSOCKET_CLIENT Configuration"
+
+config AVM_WEBSOCKET_CLIENT_ENABLE
+	bool "Enable AtomVM WebSocket client driver"
+	default y
+	help
+		Use this parameter to enable or disable the AtomVM WebSocket client driver.
+
+config AVM_WEBSOCKET_CLIENT_MAX_MESSAGE_SIZE
+	int "Maximum reassembled message size (bytes)"
+	default 4096
+	depends on AVM_WEBSOCKET_CLIENT_ENABLE
+	help
+		A message larger than this is dropped and reported as
+		{websocket, Port, {error, message_too_large}} rather than being
+		delivered truncated. Can be lowered per connection.
+
+endmenu

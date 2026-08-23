@@ -1,0 +1,12 @@
+{application, atomvm_websocket_client, [
+    {description, "A WebSocket client for AtomVM on the ESP32"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        kernel, stdlib
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+]}.
